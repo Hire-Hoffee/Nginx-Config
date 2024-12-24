@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: nginx-pet-projects
+    container_name: nginx-pet-projects-container
+    build:
+      context: .
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "443:443"
+    restart: on-failure
